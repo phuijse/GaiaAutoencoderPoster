@@ -1,0 +1,1 @@
+{"hidden_dim": 128, "lr": 0.001, "use_radam": true, "batch_size": 128, "use_layernorm": false, "seed": 1234, "use_log_frequency": true, "use_log_amplitude": true, "n_epochs": 500, "n_neighbors": 15, "metric": "euclidean"}

@@ -1,0 +1,1 @@
+{"beta": 0.0001, "n_latent": 5, "model_decoder_variance": true, "lr": 0.001, "batch_size": 64, "use_radam": true, "seed": 1234}
