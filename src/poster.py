@@ -192,7 +192,7 @@ def build_dashboard():
         pn.Row(
             pn.Column(
                 xp_dmap.opts(width=280, height=180).opts(framewise=True, toolbar=None, title='Low-res spectra'),
-                lc_folded_dmap.opts(width=280, height=180).opts(color='k', framewise=True, invert_yaxis=True, xlim=(0, 1), toolbar=None, title='Folded light curve'),
+                lc_folded_dmap.opts(width=280, height=180).opts(color='k', framewise=True, invert_yaxis=True, xlim=(0, 2), toolbar=None, title='Folded light curve'),
                 lc_raw_dmap.opts(width=280, height=180).opts(color='k', framewise=True, invert_yaxis=True, xlim=(1600, 2800), toolbar=None, title='Raw light curve'),
             ),
             pn.Column(latent_space.opts(width=800, height=180*3, toolbar='below') * latent_view, show_labeled),
@@ -208,7 +208,10 @@ def build_dashboard():
 
     classification_panel = pn.Column(
         custom_md('## Results: Classifying variable sources using the learned representation\n'),
-        pn.pane.PNG('images/cm_lr.png', width=600, align="center"),
+        pn.Row(
+            custom_md(tb.classification_md),
+            pn.pane.PNG('images/cm_lr.png', width=700, align="center"),
+        )
     )
 
     dashboard = pn.Column(
@@ -248,8 +251,7 @@ def build_dashboard():
             pn.Spacer(width=20),
             pn.Column(
                 custom_md(f'## Conclusion and future work\n{tb.conclusions}'),
-                pn.pane.Markdown('Scan the QR code to access our article on *Gaia* DR3 Autoencoders:'),
-                pn.pane.PNG('images/paper_qr.png', width=200, align="center"),
+                pn.pane.PNG('images/paper_qr.png', width=180, align="center"),
                 custom_md(f'## Selected references\n{tb.references}'),
             )
         ),

@@ -39,6 +39,13 @@ decoding_md = """
 - We used five latent variables each for the low-resolution spectra and phase-folded time series, respectively
 """
 
+classification_md = """
+- The latent variables are used to train a linear classifier.
+- The confusion matrix to the right visualizes the classifier’s performance.
+- The i, j cell represents the percentage of sources from class i that are classified as j.
+- Misclassifications are mostly confined to closely related subtypes.
+"""
+
 references = """
 1. [Gaia collaboration, "The Gaia mission", A&A, 2016](https://www.aanda.org/articles/aa/full_html/2016/11/aa29272-16/aa29272-16.html) 
 1. [Gaia collaboration, "Gaia Data Release 3. Summary of the content and survey properties", A&A, 2023](https://www.aanda.org/articles/aa/full_html/2023/06/aa43940-22/aa43940-22.html)
@@ -49,5 +56,6 @@ references = """
 conclusions = """
 - We trained a neural network model that combines *Gaia* time series and low-resolution spectra into a single representation
 - The class of the object is not given to the model. Yet, the different variability classes organize cleanly in the new representation
-- These results were obtained using data from the *Gaia* DR3. We are currently working on incorporating data from additional instruments and implementing the models for DR4 (Dec. 2026).
+- These results were obtained using data from the *Gaia* DR3. **Scan the QR code below to access see our article**
+- We are currently working on incorporating data from additional instruments and implementing the models for DR4
 """
