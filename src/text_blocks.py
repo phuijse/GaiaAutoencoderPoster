@@ -2,7 +2,7 @@ gaia_intro = """
 ESA's *Gaia* (2013-2025) is a space astrometry mission designed to deliver a precise census of the Milky Way. Among other data products, *Gaia*'s third data release (DR3) provides:
 
 - **Astrometry:** Positions and parallaxes for 1.5 billion astronomical sources
-- **Photometry:** Broadband light curves for 11.7 sources
+- **Photometry:** Broadband light curves for 11.7 million sources
 - **Spectrophotometry:** Low-resolution spectra for 219 million sources 
 
 With its all-sky, multi-epoch observations, *Gaia* provides an exceptional dataset for variability studies.
