@@ -146,7 +146,7 @@ def build_dashboard():
         with torch.no_grad():
             folded_rec = model_fold.decoder.forward(rec_phase_emb, zz_[:, :-1])
             folded_rec_std = model_fold.decoder_variance.forward(zz_[:, -1]).exp().sqrt()
-        rec_plot =  hv.Curve((rec_phase.numpy(), folded_rec[0].cpu().numpy()), 'Phase', 'Norm. magnitude') 
+        rec_plot =  hv.Curve((rec_phase.numpy(), folded_rec[0].cpu().numpy()), 'Phase ', 'Norm. magnitude') 
         rec_plot = rec_plot * hv.Spread((rec_phase.numpy(), folded_rec[0].cpu().numpy(), folded_rec_std.cpu())).opts(alpha=0.25)
         return rec_plot.opts(framewise=True, shared_axes=True, ylim=(-0.2, 1.2), invert_yaxis=True, width=width, height=height, toolbar=None)
 
